@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "bn_traitement_etc",
+    "description": "On va chercher les fichiers csv dans le Lakehouse des données brutes pour les traiter"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "49df56d1-2a56-a226-45e4-477bf75937ed"
+  }
+}
