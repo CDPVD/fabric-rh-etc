@@ -8,15 +8,15 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "fa1ac0c0-1438-4951-8f0a-2e448875c13b",
+# META       "default_lakehouse": "1a399aec-f1f5-40d3-9bb8-d41a80c0b5dd",
 # META       "default_lakehouse_name": "OR",
-# META       "default_lakehouse_workspace_id": "daa3c10b-5559-4a56-990f-61a35ddc0ac9",
+# META       "default_lakehouse_workspace_id": "28af571b-e594-4ba4-bba7-9cc05da270ce",
 # META       "known_lakehouses": [
 # META         {
-# META           "id": "947137a9-d929-4fd5-ae1b-8ca0f40a952e"
+# META           "id": "1a399aec-f1f5-40d3-9bb8-d41a80c0b5dd"
 # META         },
 # META         {
-# META           "id": "fa1ac0c0-1438-4951-8f0a-2e448875c13b"
+# META           "id": "506d295c-3dbf-4271-bfa0-37bfd2e756d7"
 # META         }
 # META       ]
 # META     }
@@ -42,9 +42,6 @@ import unicodedata
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
-
-# MARKDOWN ********************
-
 
 # MARKDOWN ********************
 
@@ -92,6 +89,9 @@ def ajout_colonnes(df):
     .withColumn("corp_empl", F.concat_ws("-", corps_col, F.col("DESCR")))
     # Création d'un identifiant combiné pour le statut d'engagement
     .withColumn("stat_engv2", F.concat_ws("-", stat_col, F.col("descr_stat_eng")))
+    # Renommer colonne 
+    .withColumnRenamed("Numéro d'organisme", "id_org")
+
     # Classification des catégories d'employés selon le code du corps d'emploi
     .withColumn(
       "cat_empl",
@@ -145,6 +145,7 @@ def traiter_df(df_csv, df_corpsEmpl, df_stat_eng):
 
   # Sélection des colonnes finales à retourner
   return df.select(
+    "id_org",
     "exercice",
     "chq_date",
     "cat_empl",
@@ -220,6 +221,3 @@ df_traite.write.format("delta").mode("overwrite").option("overwriteSchema", "tru
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
-
-# MARKDOWN ********************
-
