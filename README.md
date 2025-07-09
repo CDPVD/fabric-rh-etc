@@ -24,36 +24,84 @@ Aucun traitement de données n’est fait autre que de mettre l’année scolair
 
 ## Mettre en place le tableau de bord ETC 
  
-- Dans votre Fabric, créez un espace de travail et nommez le « fabric-rh-etc » (ce nom n’est pas une suggestion, il faut vraiment créer cet espace avec ce nom). 
- 
- 
-- Une fois l’environnement créé, dans le haut à droite, cliquez sur « Paramètres de l’espace de travail » 
- 
-- Allez sur Intégration de Git et sélectionnez GitHub 
- 
-- Une fois connecté sur Git, inscrivez le repo : CDPVD/fabric-rh-etc, sur la branche main. 
- 
-- En cliquant sur « Connexion et synchronisation » tout le nécessaire pour faire fonctionner les interfaces de Paie. 
- 
-- Dans le dossier « lac de donnée », allez dans le lac de données « Bronze » 
- 
-- Dans la section « Fichiers », aller créer un dossier « etc ». C’est le dossier dans lequel vous devrez aller téléverser les fichiers CSV de PERCOS qui sont générés à chaque génération de paie. Pour avoir ces fichiers, référez-vous à votre personne aux ressources humaines. 
- 
-- Allez dans le bloc note « bn_annee_scolaire » dans le dossier « bloc-notes » et vérifiez si les « éléments de donnes » est bien configuré. 
+- Dans votre Fabric, créez un espace de travail et nommez le "fabric-rh-etc" (ce nom n’est pas une suggestion, il faut vraiment créer cet espace avec ce nom). 
 
-- Si vous ne voyez qu’une séquence de chiffres et lettre, c’est que la configuration n’est pas bonne. Cliquez sur « Ajouter des éléments de données » et sélectionnez « Sources de données existants » 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_1.png" alt="Logo" width="300" style="margin-left: 200px;">
+
+
+- Une fois l’environnement créé, dans le haut à droite, cliquez sur "Paramètres de l’espace de travail"
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_2.png" alt="Logo" width="400"/>
+
+
+- Allez sur Intégration de Git et sélectionnez GitHub
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_3.png" alt="Logo" width="400"/>
  
-- Il faut sélectionner le LakeHouse « Or » de l’environnement de données actuel. Faire un clique droit et le mettre par défaut. 
+
+- Une fois connecté sur Git, inscrivez le repo : "CDPVD/fabric-rh-etc", sur la branche main.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_4.png" alt="Logo" width="300"/>
  
-- Une fois le LakeHouse connecté, allez modifier la ligne cibles_Ministere et inscrivez les cibles que votre direction général ou DRH vous donnera. Une fois, vos cibles inscrites, allez cliquer sur le bouton « Tout exécuter ». 
+
+- En cliquant sur « Connexion et synchronisation » tout le nécessaire pour faire fonctionner les interfaces de Paie.
+
  
-- Allez dans le bloc note « bn_traitement_etc » dans le dossier « bloc-notes » et vérifiez si les « éléments de donnes » est bien configuré. 
+
+- Dans le dossier "lac de donnée", allez dans le lac de données « Bronze »
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_5.png" alt="Logo" width="300"/>
  
-- Si vous ne voyez qu’une séquence de chiffres et lettre, c’est que la configuration n’est pas bonne. Cliquez sur « Ajouter des éléments de données » et sélectionnez « Sources de données existants » 
+
+- Dans la section "Fichiers", aller créer un dossier "etc". C’est le dossier dans lequel vous devrez aller téléverser les fichiers CSV de PERCOS qui sont générés à chaque génération de paie. Pour avoir ces fichiers, référez-vous à votre personne aux ressources humaines.
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_6.png" alt="Logo" width="300"/><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_7.png" alt="Logo" width="300"/>
+  
  
-- Il faut sélectionner le LakeHouse « Or » et « Bronze » de l’environnement de données actuel. Faire un clique droit sur « Or » et le mettre par défaut. 
+- Allez dans le bloc note « bn_annee_scolaire » dans le dossier "bloc-notes" et vérifiez si les "éléments de donnes" est bien configuré.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_8.png" alt="Logo" width="300"/>
+
+
+
+- Si vous ne voyez qu’une séquence de chiffres et lettre, c’est que la configuration n’est pas bonne. Cliquez sur "Ajouter des éléments de données" et sélectionnez "Sources de données existants"
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_9.png" alt="Logo" width="300"/>
  
-- Une fois le LakeHouse connecté, cliquer sur le bouton « Tout exécuter ». 
+
+- Il faut sélectionner le LakeHouse "Or" de l’environnement de données actuel. Faire un clique droit et le mettre par défaut.
+  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_10.png" alt="Logo" width="300"/>
+ 
+
+
+- Une fois le LakeHouse connecté, allez modifier la ligne cibles_Ministere et inscrivez les cibles que votre direction général ou DRH vous donnera. Une fois, vos cibles inscrites, allez cliquer sur le bouton "Tout exécuter".
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_11.png" alt="Logo" width="300"/>
+ 
+
+- Allez dans le bloc note "bn_traitement_etc" dans le dossier "bloc-notes" et vérifiez si les "éléments de donnes" est bien configuré.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_12.png" alt="Logo" width="300"/> 
+ 
+
+- Si vous ne voyez qu’une séquence de chiffres et lettre, c’est que la configuration n’est pas bonne. Cliquez sur "Ajouter des éléments de données" et sélectionnez "Sources de données existants"
+<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_13.png" alt="Logo" width="300"/>
+ 
+
+- Il faut sélectionner le LakeHouse "Or" et "Bronze" de l’environnement de données actuel. Faire un clique droit sur "Or" et le mettre par défaut.
+
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image_14.png" alt="Logo" width="300"/>
+
+ 
+- Une fois le LakeHouse connecté, cliquer sur le bouton "Tout exécuter".
+
+
+
+
+  
  
  
  
